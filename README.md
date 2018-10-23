@@ -1,74 +1,50 @@
 ## 简答题
 
-###### 一、参考答案
+###### 一、下面代码的输出是什么，并简述原因。
+
 ```js
-const a = 1;
-const b = 2;
-const c = a === 1 ? (b === 2 ? 3 : 4) : 5;
+let x = 1;
+switch (x) {
+  case '1':
+    console.log(1);
+    break;
+  case 1:
+    console.log(2);
+    break;
+  default:
+    break;
+}
 ```
 
-###### 二、参考答案
+###### 二、请简述 `throw` 语句的作用和用法。
+
+###### 三、请列举传给 `catch` 语句块的参数 `e` 有哪些属性、属性的含义分别是什么。
+
 ```js
-12 ^ 15 的执行过程：
+try {
 
-12 (base 10) = 00001100 (base 2)
-15 (base 10) = 00001111 (base 2)
---------------------------------
-12 ^ 15 (base 10) = 00000011 (base 2) = 3 (base 10)
+} catch (e) {
+  // `e` 有哪些属性、属性的含义分别是什么
+}
 ```
-
-###### 三、参考答案
-第二段代码的 `i` 会自增两次，第一段代码的 `i` 只会自增一次。
-
-
-###### 四、请简述下述运算符的作用并举例说明：
-
-- `typeof`：检测变量类型
-- `delete`：删除对象属性
-- `void`：执行表达式，但无返回值
-- `,`(逗号运算符)：执行两边表达式，返回最后的表达式的值
-- `()`(分组运算符)：分组操作符，可以控制表达式的优先级
-- `in`：检测对象是否拥有某个属性
-- `instanceof`：检测某个对象是否为某个对象的类型。
-- `new`：创建某个对象类型的实例
-- `...`(扩展运算符)：扩展操作符允许一个表达式展开为多个值。
-
-参考链接：<https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators>
 
 ## 编程题
 
-###### 一、参考答案
-```js
-let one = 1;
-let two = 2;
-
-// 方法一：使用中间变量
-let temp = one;
-one = two;
-two = temp;
-
-// 方法二：解构赋值
-[one, two] = [two, one];
-
-// 方法三：数学求和法
-one = one + two;
-two = one - two;
-one = one - two;
-
-console.log(one, two); // 输出 2, 1
-
-```
-
-
-###### 二、参考答案
+###### 一、打印九九乘法表，输出结果如下：
 
 ```js
-const seconds = 1000000;
-const days = Math.floor(seconds / (60 * 60 * 24));
-let leftSeconds = Math.floor(seconds % (60 * 60 * 24));
-const hours = Math.floor(leftSeconds / (60 * 60));
-leftSeconds = Math.floor(leftSeconds % (60 * 60));
-const minutes = Math.floor(leftSeconds / 60);
-leftSeconds = Math.floor(leftSeconds % 60);
-console.log(days + '天' + hours + '时' + minutes + '分' + leftSeconds + '秒')
+                                1*1=1
+                            1*2=2    2*2=4
+                        1*3=3    2*3=6    3*3=9
+                    1*4=4    2*4=8    3*4=12    4*4=16
+                1*5=5    2*5=10    3*5=15    4*5=20    5*5=25
+            1*6=6    2*6=12    3*6=18    4*6=24    5*6=30    6*6=36
+        1*7=7    2*7=14    3*7=21    4*7=28    5*7=35    6*7=42    7*7=49
+    1*8=8    2*8=16    3*8=24    4*8=32    5*8=40    6*8=48    7*8=56    8*8=64
+1*9=9    2*9=18    3*9=27    4*9=36    5*9=45    6*9=54    7*9=63    8*9=72    9*9=81
 ```
+
+> 注：整体输出为金字塔形，组和组之间的间距是 4 个空格。
+
+###### 二、小明在今年新年的第一天将 10000 元人民币存入银行，银行的利息为 8%。之后每年的最后一天小明会取出 1000 元。请编写程序，计算一下多少年小明就会清空他的帐户？
+
