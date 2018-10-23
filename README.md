@@ -1,65 +1,45 @@
 ## 简答题
 
-###### 一、安装 Sublime Text、Chrome、Firefox
+###### 一、请编写一段能正常运行的三元条件运算符嵌套三元条件运算符的 JavaScript 语句块代码。
 
-请在自己的电脑上安装 Sublime Text 编辑器、Chrome 浏览器、Firefox 浏览器。
+###### 二、请演示 `12 ^ 15` 的详细执行过程。
 
-###### 二、创建 `hello world` 文件
-
-在实际工作中，调试代码的时候，一般不会使用视频课程中的 `document.write` 方法，最常用的方法是使用 `console.log` 方法。
-
-- 首先，在 Sublime Text 中 输入下面的代码：
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>hello world</title>
-</head>
-<body>
-<script src="hello_world.js"></script>
-</body>
-</html>
-```
-
-将文件保存为 `hello_world.html`。
-
-- 然后，在 Sublime Text 中输入下面的代码：
+###### 三、请简述下面两段代码的不同之处。
 
 ```js
-console.log('hello world');
+// 代码片段一
+let arr = [1, 2, 3];
+let i = 0;
+arr[i++] += 5;
+
+// 代码片段二
+let arr = [1, 2, 3];
+let i = 0;
+arr[i++] = arr[i++] + 5;
 ```
 
-将文件保存为 `hello_world.js`。
+###### 四、请简述下述运算符的作用并举例说明：
 
-> 注意，`hello_world.html` 和 `hello_world.js` 这两个文件要放在同个目录中。
+- `typeof`
+- `delete`
+- `void`
+- `,`(逗号运算符)
+- `()`(分组运算符)
+- `in`
+- `instanceof`
+- `new`
+- `...`(扩展运算符)
 
-###### 三、在 Chrome 和 Firefox 中运行页面
-
-- 在 Chrome 中打开 `hello_world.html`，然后分别找出两种打开控制台的方式，其中一种使用鼠标，另外一种使用快捷键，确认控制台输出了 `hello world`。
-
-- 在 Firefox 中打开 `hello_world.html`，然后分别找出两种打开控制台的方式，其中一种使用鼠标，另外一种使用快捷键，确认控制台输出了 `hello world`。
-
-
-###### 四、使用 Node.js 在命令行中执行 `hello_world.js`
-
-[Node.js](https://nodejs.org/) 是目前前端工程师非常喜欢的开发语言，它的语法和 JavaScript 一样，也支持 `console.log` 方法。
-
-- 按照上面的官网地址，在自己的电脑上安装 Node.js。
-- 打开命令行，在命令行中进入到保存 `hello_world.js` 文件的目录，然后运行下面的命令：
-
-```shell
-node hello_world.js
-```
-
-确认命令行中输出了 `hello world`。
 
 ## 编程题
 
-###### 一、给定圆的半径，求圆的面积
+###### 一、编写程序，实现交换下述两个变量的值，至少需要提供 3 种解决方案：
 
-更改 `hello_world.js` 的代码，在控制台输出指定半径（可以固定写死）的圆的面积，输出结果要求保留两位小数。
+```js
+let one = 1;
+let two = 2;
+// todo: 请在这里补充代码
+console.log(one, two); // 输出 2, 1
+```
 
-
-
+###### 二、给定一个以秒为单位的数值，输出`天...时...分...秒`的格式，比如，`1000000` 秒，输出结果为 `11天13时46分40秒`
